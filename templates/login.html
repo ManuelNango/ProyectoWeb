@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      .gradient-custom {
+  /* fallback for old browsers */
+  background: #820091;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom right, rgb(236, 67, 67), rgb(255, 0, 0));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom right, rgb(223, 118, 118), rgb(255, 0, 0))
+  }
+  
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+  </style>
+    <title>Pagina MN-Login</title>
+    <link rel="shortcut icon" type="image/png" href="static/img/Logo2_circle.png">
+  </head>
+  
+  <body>
+    <div class="container" style="margin-top: 100px;">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <div class="card-header">
+              <h3>Iniciar sesión</h3>
+            </div>
+            <form action="{{ url_for('login') }}" method="post">
+                {% if mesage is defined and mesage %}
+                            <div class="alert-warning">{{ mesage }}</div><br>
+                    {% endif %}
+                    <!-- USERNAME INPUT -->
+                     <div class="form-group">
+                            <label for="email">Correo:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo" name="email">
+                     </div>
+                    <!-- PASSWORD INPUT -->
+                    <div class="form-group">
+                            <label for="pwd">Contraseña:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" name="pswd">
+
+                            <a></a>
+                  <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+
+                  <button type="button" class="btn btn-primary btn-block" onclick="location.href='/';">Regresar</button>
+                  
+                  <a class="nav-link" href="{{ url_for('registro2')}}">Haz clic aquí para Registrarte</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

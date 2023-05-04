@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
+    
+    <!-- select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+    
+    
+        <style>
+            .gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 0, 0));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(89, 0, 255))
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registro de Cita</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+  <body>
+    <h1 style="text-transform: uppercase;">HACER UNA CITA</h1>
+    <form>
+      <label for="nombre">Nombre del paciente:</label>
+      <input type="text" id="nombre" name="nombre"><br>
+
+      <label for="telefono">Número de teléfono:</label>
+      <input type="tel" id="telefono" name="telefono"><br>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email"><br>
+
+      <label for="sintomas">Síntomas:</label>
+      <textarea id="sintomas" name="sintomas"></textarea><br>
+
+      <label for="fecha">Seleccionar fecha:</label>
+      <input type="date" id="fecha" name="fecha"><br>
+
+      <label for="departamento">Departamento:</label>
+      <select id="departamento" name="departamento">
+        <option value="cardiologia">Cardiología</option>
+        <option value="neurologia">Neurología</option>
+        <option value="oncologia">Oncología</option>
+        <option value="pediatria">Pediatría</option>
+      </select><br>
+
+      <label for="genero">Género:</label>
+      <input type="radio" id="genero" name="genero" value="Masculino"> Masculino
+      <input type="radio" id="genero" name="genero" value="Femenino"> Femenino
+      <input type="radio" id="genero" name="genero" value="Otro"> Otro<br>
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora"><br>
+
+      <input type="submit" value="Realizar cita">
+    </form>
+  </body>
+</html>

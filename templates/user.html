@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sesión</title>
+    <link rel="shortcut icon" type="image/png" href="/static/img/Logo2_circle.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='user.css') }}">
+</head>
+
+<body>
+    <main class="main">
+        <section id="principal" class="contenedor-1">
+
+            <header class="cabecera">
+                <div class="logo">
+                    <img src="../static/img/Logo.png" alt="Logo Clinica">
+                </div>
+                <div class="navegacion">
+                    <a href="{{url_for('crud')}}" class="link_pacientes">Pacientes</a>
+                    <a href="{{url_for('citar')}}" class="link_pacientes">Citas</a>
+                    <p class="no-link"></p>
+                    <p class="no-link"></p>
+                    <p class="welcome">{{session.name}} &nbsp; </p> <h1>|</h1> <a href="{{ url_for('home') }}" class="logout"> &nbsp; Salir</i></a>
+                </div>
+            </header>
+
+            <div class="imagen-de-fondo">
+            </div>
+            <div class="imagen-bienvenida">
+                <img src="../static/img/Bienvenidos.png" alt="">
+            </div>
+
+        </section>
+</body>
+
+<footer>
+    <p>Manuel Nango</p>
+</footer>
+
+</html>

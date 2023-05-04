@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="shortcut icon" type="image/png" href="/static/img/Logo2_circle.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+
+<body>
+    <div class="login-box" style="width: auto; height: auto;">
+        <img src="/static/img/Logo_circle.jpg" class="avatar" alt="Avatar Image">
+        <h1>REGISTRARSE</h1>
+        <form action="{{ url_for('register') }}" method="post">
+        {% if mesage is defined and mesage %}
+                        <div class="alert-warning">{{ mesage }}</div><br>
+		        {% endif %}
+                <!-- USERNAME REGISTRATION -->
+                <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" name="name">
+                </div>
+                <!-- EMAIL REGISTRATION -->
+                <div class="form-group">
+                        <label>Correo:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" name="email">
+                </div>
+                <!-- PASSWORD REGISTRATION -->
+                <div class="form-group">
+                        <label>Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa una contraseña" name="pswd">
+                </div>
+                <!-- BUTTON -->
+                <div class="form-group">
+                        <button type="submit" class="boton">Registrar</button><br><br>
+                        <a href="{{url_for('login')}}">¿Ya tienes una cuenta?</a><br>
+                        <a href="{{url_for('home')}}">Regresar al inicio 🏠</a>
+                 </div>
+        </form>
+    </div>
+</body>
+
+</html>
