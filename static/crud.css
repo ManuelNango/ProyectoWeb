@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+}
+.container{
+    height: calc(100vh - 100px); /* Resta la altura del header y del footer de la altura total de la pantalla */
+    overflow-y: auto; /* Agrega un scroll vertical si el contenido es más largo que la altura de la pantalla */
+    padding-top: 80px; /* Agrega un padding-top para evitar que el contenido se superponga con el header */
+    padding-bottom: 20px; /* Agrega un padding-bottom para evitar que el contenido se superponga con el footer */
+}
+.cabecera{
+    background-color: rgb(2, 39, 56);
+    display: flex;
+    justify-content: center; /* centra los elementos horizontalmente */
+    align-items: center; /* centra los elementos verticalmente */
+    overflow: hidden;
+    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+}
+.welcome{
+    font-family: 'Arial Narrow';
+    font-size: 20px;
+    font-weight: bold;
+    color: #5994af;
+    display: inline-block;
+    text-align: center;
+}
+.logout{
+    font-family: 'Arial Narrow';
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.logo{
+    height: 80px;
+    width: 600px;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.navegacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    align-items: center;
+    padding-right: 100px;
+}
+.no-link{
+    color: #fff;
+    padding: 70px 20px;
+    font-family: monospace;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+/*PIE DE PÁGINA*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+} 
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer p{
+    margin: 0;
+}

@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: url(../static/img/fondo_difuminado_login.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+.login-box{
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.login-box .avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+.login-box h1{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+.login-box label{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+.login-box input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.login-box input[type="email"], .login-box input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+.boton{
+  border: none;
+  outline: none;
+  color: white;
+  height: 40px;
+  width: 90px;
+  background: #94124a;
+  font-size: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  list-style: none;
+  cursor: pointer;
+}
+.login-box a{
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: darkgrey;
+}
+.login-box a:hover{
+  color: #fff;
+}
+.alert-warning{
+  font-size: 16px;
+  font-weight: bold;
+  color: darkgrey;
+  text-align: center;
+}
